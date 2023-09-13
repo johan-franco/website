@@ -15,6 +15,16 @@
 
     button.addEventListener('click', function(){
         console.log('Button clicked')
+        fetch("https://www.chess.com/member/thehydra39")
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Network error")
+            }
+            return response.json();
+        })
+        .then(data =>{
+            console.log(data)
+        })
     })
     </script>
     </body>
