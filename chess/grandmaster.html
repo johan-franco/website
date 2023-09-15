@@ -23,10 +23,12 @@
             return response.text();
         })
         .then(data =>{
-            console.log(data)
             start = data.search("window.chesscom.stats")
+            const spliced_start = data.slice(start)
+            end = spliced_start.search("<")
             console.log(start)
-            console.log(data.slice(start))
+            console.log(data.slice(start), end)
+            
 
         })
     })
