@@ -26,8 +26,10 @@
             start = data.search("window.chesscom.stats")
             const spliced_start = data.slice(start)
             end = spliced_start.search("<")
-
-            console.log(data.slice(start, end),)
+            end = start + end
+            console.log(start)
+            console.log(end)
+            console.log(data.slice(start, end))
 
 
         })
