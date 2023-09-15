@@ -24,7 +24,10 @@
         })
         .then(data =>{
             console.log(data)
-            
+            start = data.search("window.chesscom.stats")
+            console.log(start)
+            console.log(data.slice(start))
+
         })
     })
     </script>
