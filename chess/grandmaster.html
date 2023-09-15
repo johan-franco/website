@@ -23,14 +23,14 @@
             return response.text();
         })
         .then(data =>{
-            start = data.search("window.chesscom.stats")
-            const spliced_start = data.slice(start)
-            end = spliced_start.search("<")
-            end = start + end
-            console.log(start)
-            console.log(end)
-            console.log(data.slice(start, end))
-
+            tempstart = data.search("window.chesscom.stats")
+            const spliced_start = data.slice(tempstart)
+            start = spliced_start.search("{") + tempstart
+            end = spliced_start.search("<") + tempstart
+            data = data.slice(start, end)
+            obj = {data}
+            console.log(obj)
+            
 
         })
     })
