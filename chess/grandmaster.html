@@ -29,6 +29,7 @@
             end = spliced_start.search("<") + tempstart
             data = data.slice(start, end)
             console.log(data)
+            data = data.replace(/(\r\n|\n|\r)/gm, "");
             obj = {data}
             console.log(obj)
             
