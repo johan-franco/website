@@ -26,7 +26,7 @@
             tempstart = data.search("window.chesscom.stats")
             const spliced_start = data.slice(tempstart)
             start = spliced_start.search("{") + tempstart + 1
-            end = spliced_start.search("<") + tempstart - 4
+            end = spliced_start.search("<") + tempstart - 5
             data = data.slice(start, end)
             console.log(data)
             data = data.replace(/(\r\n|\n|\r)/gm, "");
