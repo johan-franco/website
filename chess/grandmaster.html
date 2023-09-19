@@ -29,17 +29,16 @@
             end = spliced_start.search("<") + tempstart - 4
             data = data.slice(start, end)
             console.log(data)
-            remove = data.search("[[0]")
-            console.log(remove)
-            data = data.slice(0, remove)
-            console.log(data)
-            data2 = data.slice(remove, (end - tempstart+4))
-            data = data + data2
-            console.log(data2)
             data = data.replace(/(\r\n|\n|\r)/gm, "");
-            obj = JSON.parse(data)
-            console.log(obj[type])
-            console.log(obj)
+            rapid = data.search("game_live_rapid")
+            rapidhold = data.slice(rapid, -1)
+            console.log(rapidhold)
+            rapidhold = rapidhold.slice(rapidhold.search("last_rating") + 2, -1)
+            rapidholda = rapidhold.search(",") - 1
+            rapidhold = rapidhold.slice(0, rapidholda)
+            console.log(rapidhold)
+        
+
             
 
         })
