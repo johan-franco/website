@@ -25,12 +25,12 @@
         .then(data =>{
             tempstart = data.search("window.chesscom.stats")
             const spliced_start = data.slice(tempstart)
-            start = spliced_start.search("{") + tempstart + 1
+            start = spliced_start.search("{") + tempstart 
             end = spliced_start.search("<") + tempstart - 5
             data = data.slice(start, end)
             console.log(data)
             data = data.replace(/(\r\n|\n|\r)/gm, "");
-            obj = {data}
+            obj = JSON.parse(data)
             console.log(obj[type])
             console.log(obj)
             
