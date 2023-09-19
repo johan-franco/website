@@ -12,13 +12,16 @@
     <button id = "update-data" type = "button">Update data</button> 
     <script> 
     function parsing(d, s){
+        function parsing(d, s){
         start_slice = d.search(s)
         slice_con = d.slice(start_slice, -1)
-        sliced_con = slice_con(slice_con.search("last_rating") + 13, -1)
+        sliced_con = slice_con.slice(slice_con.search("last_rating") + 13, -1)
         slice_end = slice_con.search(",")
         final_slice = sliced_con.slice(0,slice_end)
         console.log(final_slice)
 
+        
+}
         
 }
     const button = document.getElementById('update-data')
@@ -41,9 +44,8 @@
             data = data.slice(start, end)
             console.log(data)
             data = data.replace(/(\r\n|\n|\r)/gm, "");
-            parsing(data,"game_live_rapid")
-            parsing(data, "gave_live_blitz")
-        
+            parsing("game_live_rapid")
+            parsing("game_live_blitz")
 
             
 
