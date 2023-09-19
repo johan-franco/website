@@ -17,7 +17,7 @@
         slice_con = d.slice(start_slice, -1)
         slice_con = slice_con.slice(slice_con.search("last_rating") + 13, -1)
         slice_end = slice_con.search(",")
-        final_slice = sliced_con.slice(0,slice_end)
+        final_slice = slice_con.slice(0,slice_end)
         console.log(final_slice)
  
         
