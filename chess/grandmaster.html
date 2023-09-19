@@ -11,9 +11,20 @@
 	<a href = "https://www.chess.com/member/thehydra39">See Khoi's Chess.com profile!</a>
     <button id = "update-data" type = "button">Update data</button> 
     <script> 
+    function parsing(d, s){
+        start_slice = d.search(s)
+        slice_con = d.slice(start_slice, -1)
+        sliced_con = sliced_p1(slice_con.search("last_rating") + 13, -1)
+        slice_end = sliced_p1.search(",")
+        final_slice = sliced_con.slice(0,slice_end)
+        console.log(final_slice)
+
+        
+}
     const button = document.getElementById('update-data')
 
     button.addEventListener('click', function(){
+    
         console.log('Button clicked')
         fetch("https://www.chess.com/stats/overview/thehydra39?")
             .then(response => {
@@ -30,13 +41,8 @@
             data = data.slice(start, end)
             console.log(data)
             data = data.replace(/(\r\n|\n|\r)/gm, "");
-            rapid = data.search("game_live_rapid")
-            rapidhold = data.slice(rapid, -1)
-            console.log(rapidhold)
-            rapidhold = rapidhold.slice(rapidhold.search("last_rating") + 13, -1)
-            rapidholda = rapidhold.search(",")
-            rapidhold = rapidhold.slice(0, rapidholda)
-            console.log(rapidhold)
+            parsing(data,"game_live_rapid")
+            parsing(data, "gave_live_blitz")
         
 
             
