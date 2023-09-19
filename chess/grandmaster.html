@@ -18,6 +18,7 @@
         slice_end = slice_con.search(",")
         final_slice = slice_con.slice(0,slice_end)
         console.log(final_slice)
+        return final_slice
  
         
 }
@@ -41,15 +42,19 @@
             end = spliced_start.search("<") + tempstart - 4
             data = data.slice(start, end)
             console.log(data)
-            data = data.replace(/(\r\n|\n|\r)/gm, "");
-            parsing(data,"game_live_rapid")
-            parsing(data,"game_live_blitz")
-            
+            data = data.replace(/(\r\n|\n|\r)/gm, "")
+            rapid = parsing(data,"game_live_rapid")
+            blitz = parsing(data,"game_live_blitz")
+            bullet = parsing(data, "game_live_bullet")
             
 
         })
     })
     </script>
+    <table>
+        <tr><th colspan=" 2"> Chess.com Statistics</th></tr>
+        <tr><th>Rapid Rating</th> <th>Blitz Rating</th></tr>
+    </table>
     <a href = "../index.html">Return to Main Page</a>
     </body>
     <p> <img src = "cImages/khoi.png" alt= "khoi"></p>
