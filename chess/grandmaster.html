@@ -31,9 +31,9 @@
             console.log(data)
             remove = data.search("[[0]")
             console.log(remove)
-            data = data.splice(start, remove -4)
+            data = data.slice(start, remove -4)
             console.log(data)
-            data2 = data.splice(remove, start)
+            data2 = data.slice(remove, start)
             data = data + data2
             console.log(data)
             data = data.replace(/(\r\n|\n|\r)/gm, "");
