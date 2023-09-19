@@ -44,8 +44,8 @@
             data = data.slice(start, end)
             console.log(data)
             data = data.replace(/(\r\n|\n|\r)/gm, "");
-            parsing("game_live_rapid")
-            parsing("game_live_blitz")
+            parsing(data,"game_live_rapid")
+            parsing(data,"game_live_blitz")
 
             
 
