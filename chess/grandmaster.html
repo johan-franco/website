@@ -75,11 +75,11 @@
             console.log(data)
             data = data.replace(/(\r\n|\n|\r)/gm, "")
             var rapid = document.getElementById("rapid")
-            rapid = parsing(data,"game_live_rapid")
+            rapid.textContent = parsing(data,"game_live_rapid")
             var blitz = document.getElementById("blitz")
-            blitz = parsing(data,"game_live_blitz")
+            blitz.textContent = parsing(data,"game_live_blitz")
             var bullet = document.getElementById("bullet")
-            bullet = parsing(data, "game_live_bullet")
+            bullet.textContent = parsing(data, "game_live_bullet")
             
 
         })
