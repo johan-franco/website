@@ -39,7 +39,7 @@
         <h1> The Future Grandmaster</h1>
 	<p>Khoi Vu (alter ego is Hudson),  is a future super Grandmaster. His username in chess.com is TheHydra39. Currently his rapid elo is 1843. 
         This impressive elo, makes Khoi board 1 of the ACC chess club.   </p>
-	<a href = "https://www.chess.com/member/thehydra39">See Khoi's Chess.com profile!</a>
+	<a href = "https://www.chess.com/member/thehydra39" style= 'color: white'>See Khoi's Chess.com profile!</a>
     <br><button id = "update-data" type = "button">Update data</button> 
     <script> 
     function parsing(d, s){
@@ -74,11 +74,12 @@
             data = data.slice(start, end)
             console.log(data)
             data = data.replace(/(\r\n|\n|\r)/gm, "")
+            var rapid = document.getElementById("rapid")
             rapid = parsing(data,"game_live_rapid")
+            var blitz = document.getElementById("blitz")
             blitz = parsing(data,"game_live_blitz")
+            var bullet = document.getElementById("bullet")
             bullet = parsing(data, "game_live_bullet")
-
-
             
 
         })
