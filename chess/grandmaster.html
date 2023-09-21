@@ -40,7 +40,12 @@
 	<p>Khoi Vu (alter ego is Hudson),  is a future super Grandmaster. His username in chess.com is TheHydra39. Currently his rapid elo is 1843. 
         This impressive elo, makes Khoi board 1 of the ACC chess club.   </p>
 	<a href = "https://www.chess.com/member/thehydra39" style= 'color: white'>See Khoi's Chess.com profile!</a>
-    <br><button id = "update-data" type = "button">Update data</button> 
+    <table>
+        <tr><th colspan="3"> Chess.com Statistics</th></tr>
+        <tr><th>Rapid Rating</th> <th>Blitz Rating</th> <th>Bullet Rating</th></tr>
+        <tr><td id = "rapid">Placeholder</td> <td id = "blitz">Placeholder </td> <td id = "bullet">Placeholder</td></tr>
+    </table>
+    <br><br><button id = "update-data" type = "button">Update data</button> 
     <script> 
     function parsing(d, s){
         start_slice = d.search(s)
@@ -90,8 +95,8 @@
         <tr><th>Rapid Rating</th> <th>Blitz Rating</th> <th>Bullet Rating</th></tr>
         <tr><td id = "rapid">Placeholder</td> <td id = "blitz">Placeholder </td> <td id = "bullet">Placeholder</td></tr>
     </table>
+    <br>
     <a href = "../index.html">Return to Main Page</a>
     </body>
-    <p> <img src = "cImages/khoi.png" alt= "khoi"></p>
 </html>
 
