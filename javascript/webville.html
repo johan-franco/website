@@ -62,19 +62,23 @@
             <a id="vLink1" href="http://validator.w3.org/check?uri=https://johan-franco.github.io/website/javascript/1notes.htm"><strong> HTML </strong> Valid! </a> |
             <a id="vLink2" href="http://jigsaw.w3.org/css-validator/validator?uri=https://johan-franco.github.io/website/javascript/1notes.htm"><strong> CSS </strong> Valid! </a>
         </footer>
-        
+
         <script>
         let drink = "Dr. Pepper";
         let lyrics = "";
         let cans = 99;
+        var element = document.querySelector('#song');
         
         while (cans > 1) {
-          lyrics += "<p>";
-          lyrics += cans + " cans of " + drink + " on the wall <br>";
-          lyrics += cans + " cans of " + drink + " on the wall <br>";
-          lyrics += "Take one down, pass it around,";
-          lyrics += "</p>";
-          cans--;
+            if(element.matches(':hover')) {
+
+                lyrics += "<p>";
+                lyrics += cans + " cans of " + drink + " on the wall <br>";
+                lyrics += cans + " cans of " + drink + " on the wall <br>";
+                lyrics += "Take one down, pass it around,";
+                lyrics += "</p>";
+                cans--;
+            }
         }
         lyrics += "<p>";
         lyrics += cans + " can of " + drink + " on the wall <br>";
