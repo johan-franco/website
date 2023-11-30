@@ -67,7 +67,7 @@
         let drink = "Dr. Pepper";
         let lyrics = "";
         let cans = 99;
-        let element = document.querySelector('#song');
+        let body = document.getElementById('#song');
         
         lyrics += "<p>";
         lyrics += cans + " cans of " + drink + " on the wall <br>";
@@ -75,18 +75,18 @@
         lyrics += "Take one down, pass it around,";
         lyrics += "</p>";
         cans--;
-        document.getElementById("song").innerHTML = lyrics
-        while (cans > 1) {
-            if(element.matches(':hover')) {
+        body.innerHTML = lyrics
+        body.addEventListener("mouseover", function() {
+                lyrics = "";
                 lyrics += "<p>";
                 lyrics += cans + " cans of " + drink + " on the wall <br>";
                 lyrics += cans + " cans of " + drink + " on the wall <br>";
                 lyrics += "Take one down, pass it around,";
                 lyrics += "</p>";
                 cans--;
-                document.getElementByID("song").innerHTML = focument.getElementById('song').replace(lyrics)
-            }
-        }
+                body("song").innerHTML = lyrics;
+            });
+        lyrics = "";
         lyrics += "<p>";
         lyrics += cans + " can of " + drink + " on the wall <br>";
         lyrics += cans + " can of " + drink + " on the wall <br>";
@@ -94,7 +94,7 @@
         lyrics += drink + " on the wall :-(";
         lyrics += "</p>";
         
-        document.getElementById("song").innerHTML = lyrics;
+        body.innerHTML = lyrics;
         </script>
     </body>
 
