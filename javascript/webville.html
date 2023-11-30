@@ -67,17 +67,24 @@
         let drink = "Dr. Pepper";
         let lyrics = "";
         let cans = 99;
-        var element = document.querySelector('#song');
+        let element = document.querySelector('#song');
         
+        lyrics += "<p>";
+        lyrics += cans + " cans of " + drink + " on the wall <br>";
+        lyrics += cans + " cans of " + drink + " on the wall <br>";
+        lyrics += "Take one down, pass it around,";
+        lyrics += "</p>";
+        cans--;
+        document.getElementById("song").innerHTML = lyrics
         while (cans > 1) {
             if(element.matches(':hover')) {
-
                 lyrics += "<p>";
                 lyrics += cans + " cans of " + drink + " on the wall <br>";
                 lyrics += cans + " cans of " + drink + " on the wall <br>";
                 lyrics += "Take one down, pass it around,";
                 lyrics += "</p>";
                 cans--;
+                document.getElementByID("song").innerHTML = focument.getElementById('song').replace(lyrics)
             }
         }
         lyrics += "<p>";
