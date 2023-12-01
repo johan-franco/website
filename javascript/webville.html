@@ -64,37 +64,40 @@
         </footer>
 
         <script>
-        let drink = "Dr. Pepper";
-        let lyrics = "";
-        let cans = 99;
-        let body = document.getElementById('#song');
+            let drink = "Dr. Pepper";
+            let lyrics = "";
+            let cans = 99;
+            let body = document.getElementById('song');
         
-        lyrics += "<p>";
-        lyrics += cans + " cans of " + drink + " on the wall <br>";
-        lyrics += cans + " cans of " + drink + " on the wall <br>";
-        lyrics += "Take one down, pass it around,";
-        lyrics += "</p>";
-        cans--;
-        body.innerHTML = lyrics
-        body.addEventListener("mouseover", function() {
-            if (cans > 1) {
-                lyrics = "";
-                lyrics += "<p>";
-                lyrics += cans + " cans of " + drink + " on the wall <br>";
-                lyrics += cans + " cans of " + drink + " on the wall <br>";
-                lyrics += "Take one down, pass it around,";
-                lyrics += "</p>";
-                cans--;
-                document.getElementById("song").innerHTML = lyrics;
-                return;
+            function renderLyrics() {
+                lyrics = "<p>" +
+                    cans + " cans of " + drink + " on the wall <br>" +
+                    cans + " cans of " + drink + " on the wall <br>" +
+                    "Take one down, pass it around," +
+                    "</p>";
+                body.innerHTML = lyrics;
             }
-            lyrics += "<p>";
-            lyrics += cans + " can of " + drink + " on the wall <br>";
-            lyrics += cans + " can of " + drink + " on the wall <br>";
-            lyrics += "Take one down, pass it around, no more cans of ";
-            lyrics += drink + " on the wall :-(";
-            lyrics += "</p>";
-            document.getElementById("song").innerHTML = lyrics;
+        
+            renderLyrics();
+        
+            body.addEventListener("mouseover", function () {
+                if (cans > 1) {
+                    lyrics = "<p>" +
+                        cans + " cans of " + drink + " on the wall <br>" +
+                        cans + " cans of " + drink + " on the wall <br>" +
+                        "Take one down, pass it around," +
+                        "</p>";
+                    cans--;
+                    body.innerHTML = lyrics;
+                    return;
+                }
+                lyrics = "<p>" +
+                    cans + " can of " + drink + " on the wall <br>" +
+                    cans + " can of " + drink + " on the wall <br>" +
+                    "Take one down, pass it around, no more cans of " +
+                    drink + " on the wall :-(" +
+                    "</p>";
+                body.innerHTML = lyrics;
             });
         </script>
     </body>
