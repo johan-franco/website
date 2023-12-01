@@ -76,19 +76,14 @@
                     "Take one down, pass it around," +
                     "</p>";
                 body.innerHTML = lyrics;
+                cans--
             }
         
             renderLyrics();
         
             body.addEventListener("mouseover", function () {
                 if (cans > 1) {
-                    lyrics = "<p>" +
-                        cans + " cans of " + drink + " on the wall <br>" +
-                        cans + " cans of " + drink + " on the wall <br>" +
-                        "Take one down, pass it around," +
-                        "</p>";
-                    cans--;
-                    body.innerHTML = lyrics;
+                    renderLyrics();
                     return;
                 }
                 lyrics = "<p>" +
