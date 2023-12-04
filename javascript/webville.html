@@ -54,20 +54,20 @@
             <li>HTML4.01 to HTML5 simplified a lot of syntax for example, <code>&ltmeta http-equiv="content-type" content="text/html; charset=UTF-8"&gt</code> was simplified to <code>&ltmeta charset="utf-8"&gt</code>.</li>
             <li>The browser makes a internal model of the page with each element representing a new object on the tree-like structure. This model is called the DOM (Document Object Model). </li>
             <li>DOM plays a vital role in the behavior of pages with javascript.</li>
-            <li> /li>
+            <li> </li>
         </ul>
         <h2>Ninety-nine Cans of Dr. Pepper</h2>
         <main id="song"> </main>
         <footer>
-            <a id="vLink1" href="http://validator.w3.org/check?uri=https://johan-franco.github.io/website/javascript/1notes.htm"><strong> HTML </strong> Valid! </a> |
-            <a id="vLink2" href="http://jigsaw.w3.org/css-validator/validator?uri=https://johan-franco.github.io/website/javascript/1notes.htm"><strong> CSS </strong> Valid! </a>
+            <a id="vLink1" href="http://validator.w3.org/check?uri=https://johan-franco.github.io/website/javascript/webville.html"><strong> HTML </strong> Valid! </a> |
+            <a id="vLink2" href="http://jigsaw.w3.org/css-validator/validator?uri=https://johan-franco.github.io/website/javascript/webville.html"><strong> CSS </strong> Valid! </a>
         </footer>
 
         <script>
         let drink = "Dr. Pepper";
         let lyrics = "";
         let cans = 99;
-        let body = document.getElementById('#song');
+        var body = document.getElementById('#song');
         
         lyrics += "<p>";
         lyrics += cans + " cans of " + drink + " on the wall <br>";
@@ -85,7 +85,7 @@
                 lyrics += "Take one down, pass it around,";
                 lyrics += "</p>";
                 cans--;
-                document.getElementById("song").innerHTML = lyrics;
+                body.innerHTML = lyrics;
                 return;
             }
             lyrics += "<p>";
@@ -94,7 +94,7 @@
             lyrics += "Take one down, pass it around, no more cans of ";
             lyrics += drink + " on the wall :-(";
             lyrics += "</p>";
-            document.getElementById("song").innerHTML = lyrics;
+            document.body.innerHTML = lyrics;
             });
         </script>
     </body>
