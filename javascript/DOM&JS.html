@@ -41,13 +41,13 @@
             <li><code>.length</code> tells us the length of an array </li>
         </ul>
         <button id="alert-button"
-        onclick="alert('Emergency Meeting!');">Alert Button</button>
+        onclick="play()">Alert Button</button>
         <script>
-            const audio = new Audio("media/emergencymeeting.mp3")  
-            var button = document.querySelectorAll("alert-button"); 
-            button.addEventListener("click", function() {
+            function play() {
+                alert("Emergency Meeting!")
+                var audio =  Audio("media/emergencymeeting.mp3")  
                 audio.play();
-            });
+            }
 
         </script>
         <footer>
