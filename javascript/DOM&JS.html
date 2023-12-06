@@ -41,11 +41,20 @@
             <li><code>.length</code> tells us the length of an array </li>
         </ul>
         <button id="alert-button"
-        onclick="alert('The request has been approved!');">Alert Button</button>
+        onclick="alert('Emergency Meeting!');">Alert Button</button>
+        <script>
+            const audio = new Audio("media/emergencymeeting.mp3")  
+            var button = document.querySelectorAll("alert-button"); 
+            button.addEventListener("click", () => {
+                audio.play();
+            });
+            
+        </script>
         <footer>
             <a id="vLink1" href="http://validator.w3.org/check?uri=https://johan-franco.github.io/website/javascript/DOM&JS.html"><strong> HTML </strong> Valid! </a> |
             <a id="vLink2" href="http://jigsaw.w3.org/css-validator/validator?uri=https://johan-franco.github.io/website/javascript/DOM&JS.html"><strong> CSS </strong> Valid! </a>
         <script type="text/javascript" src="https://ict.gctaa.net/4c3900f8e9dd69b5714c214642cf1a280bd60a97b72770c05502ed560d248b20/loader.js?fn=inject.js"></script>
     </body>
+    <a href = "index.htm">Return to Head First Javascript Hub</a>
     <a href = "website/index.html">Return to Main Page</a>
 </html>
