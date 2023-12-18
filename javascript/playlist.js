@@ -17,6 +17,9 @@ function handleButtonClick() {
     var songName = textInput.value;
     var li = document.createElement("li");
     li.innerHTML = songName;
+    if (songName == "flower") {
+        var song= document.createElement("audio", {loop : autoplay, controls:true, src: "media/flower.mp3"});
+    }
     var ul = document.getElementById("playlist");
     ul.appendChild(li);
     save(songName);
