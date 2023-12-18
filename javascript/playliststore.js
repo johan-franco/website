@@ -14,16 +14,19 @@ function loadPlaylist() {
         }
     }
 }
-function getSavedSongs() {
-    return getStorearray("playlist");
-}
+
 function getStorearray(key) {
     var playlistarray = localStorage.getItem(key);
     if (playlistarray == null || playlistarray == "") {
-        playlistarray = new array();
+        playlistarray = new Array();
     }
     else {
         playlistarray = JSON.parse(playlistarray);
     }
     return playlistarray;
 }
+
+function getSavedSongs() {
+    return getStorearray("playlist");
+}
+
