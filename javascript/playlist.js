@@ -17,7 +17,7 @@ function handleButtonClick() {
     li.innerHTML = songName;
     var ul = document.getElementById("playlist");
     ul.appendChild(li);
-    save(songName)
+    save(songName);
 }
 
 window.onload = init;
