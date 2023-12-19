@@ -18,7 +18,11 @@ function handleButtonClick() {
     var li = document.createElement("li");
     li.innerHTML = songName;
     if (songName == "flower") {
-        var song= document.createElement("audio", {loop : autoplay, controls:true, src: "media/flower.mp3"});
+        var audio =  new Audio("media/flower.mp3");
+        audio.play();
+    }
+    if(songName = "emergency") {
+        var audio = new Audio("media/emergencymeeting.mp3")
     }
     var ul = document.getElementById("playlist");
     ul.appendChild(li);
