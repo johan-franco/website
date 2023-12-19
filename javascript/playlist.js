@@ -22,7 +22,8 @@ function handleButtonClick() {
         audio.play();
     }
     if(songName = "emergency") {
-        var audio = new Audio("media/emergencymeeting.mp3")
+        var audio = new Audio("media/emergencymeeting.mp3");
+        audio.play();
     }
     var ul = document.getElementById("playlist");
     ul.appendChild(li);
