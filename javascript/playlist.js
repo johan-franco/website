@@ -1,4 +1,4 @@
-window.onload = init;
+
 
 function init() {
     var button = document.getElementById("addButton");
@@ -17,10 +17,7 @@ function handleButtonClick() {
     var songName = textInput.value;
     var li = document.createElement("li");
     li.innerHTML = songName;
-    if (songName == "flower") {
-        var audio =  new Audio("media/flower.mp3");
-        audio.play();
-    }
+
     if(songName = "emergency") {
         var audio = new Audio("media/emergencymeeting.mp3");
         audio.play();
