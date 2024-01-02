@@ -17,7 +17,7 @@ function Movie(title, genre,rating, showtimes, table) {
     };
     this.display = function () {
         if (this.table == false) {
-            var Mtable = createElement(table);
+            var Mtable = document.createElement(table);
             let row = document.createElement(tr);
             Mtable.append(row);
             var a = document.createElement(th);
@@ -27,7 +27,7 @@ function Movie(title, genre,rating, showtimes, table) {
             row.append(a);
             row.append(b);
         };
-        
+
         var row = document.createElement(tr);
         Mtable.append(row);
         var name = document.createElement(td);
