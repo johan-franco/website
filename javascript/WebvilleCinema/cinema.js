@@ -16,8 +16,9 @@ function Movie(title, genre,rating, showtimes, table) {
         }
     };
     this.display = function () {
-        if (this.table == false) {
-            var Mtable = document.createElement(table);
+
+        /*if (this.table == false) {
+            var Mtable = document.getElementById("MovieTable");
             let row = document.createElement(tr);
             Mtable.append(row);
             var a = document.createElement(th);
@@ -25,8 +26,8 @@ function Movie(title, genre,rating, showtimes, table) {
             var b = document.createElement(th);
             b.innerHTML = "Closest Showings"
             row.append(a);
-            row.append(b);
-        };
+            row.append(b); 
+        };*/
 
         var row = document.createElement(tr);
         Mtable.append(row);
@@ -40,7 +41,7 @@ function Movie(title, genre,rating, showtimes, table) {
 }
 
 function init() {
-
+    var Mtable = document.getElementById("MovieTable");
     var banzaiMovie= new Movie("Buckaroo Banzai", "Cult Classic", 5, ["1:00pm", "5:00pm", "7:00pm", "11:00pm"], false);
     alert(banzaiMovie.getNextShowing);
     var plan9Movie = new Movie("Plan 9 from Outer Space",
