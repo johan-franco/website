@@ -29,12 +29,12 @@ function Movie(title, genre,rating, showtimes, table) {
             row.append(b); 
         };*/
 
-        var row = document.createElement(tr);
+        var row = document.createElement("tr");
         Mtable.append(row);
-        var name = document.createElement(td);
+        var name = document.createElement("td");
         name.innerHTML = this.title;
         row.append(name);
-        var showing = document.createElement(td);
+        var showing = document.createElement("td");
         showing.innerHTML = this.getNextShowing();
         row.append(showing);
     };
