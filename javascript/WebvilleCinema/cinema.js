@@ -51,7 +51,8 @@ function Movie(title, genre,rating, showtimes, table) {
 function init() {
     var Mtable = document.getElementById("MovieTable");
     var banzaiMovie= new Movie("Buckaroo Banzai", "Cult Classic", 5, ["1:00pm", "5:00pm", "7:00pm", "11:00pm"], false);
-    alert(banzaiMovie.getNextShowing);
+    banzai= banzaiMovie.getNextShowing();
+    alert(banzai);
     var plan9Movie = new Movie("Plan 9 from Outer Space",
                            "Cult Classic",
                            2,
