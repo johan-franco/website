@@ -16,7 +16,7 @@ function Movie(title, genre,rating, showtimes, table) {
         }
     };
     this.display = function () {
-
+        var Mtable = document.getElementById("MovieTable");
         /*if (this.table == false) {
             var Mtable = document.getElementById("MovieTable");
             let row = document.createElement(tr);
