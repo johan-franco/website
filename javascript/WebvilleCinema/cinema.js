@@ -14,12 +14,13 @@ function Movie(title, genre,rating, showtimes, table) {
     this.rating = rating;
     this.showtimes = showtimes;
     this.table = table
+    
     this.getNextShowing = function() {
         var now = new Date().getTime();
         for (var i = 0; i < this.showtimes.length; i++) {
             var showtime = getTimeFromString(this.showtimes[i]);
             if ((showtime - now) > 0) {
-                return "Next showing of " + this.title + " is " + this.showtimes[i];
+                return this.showtimes[i];
             }
         }
     };
@@ -52,7 +53,7 @@ function init() {
     var Mtable = document.getElementById("MovieTable");
     var banzaiMovie= new Movie("Buckaroo Banzai", "Cult Classic", 5, ["1:00pm", "5:00pm", "7:00pm", "11:00pm"], false);
     banzai= banzaiMovie.getNextShowing();
-    alert(banzai);
+    alert("Next showing of " + banzaiMovie.title + " is " + banzai);
     var plan9Movie = new Movie("Plan 9 from Outer Space",
                            "Cult Classic",
                            2,
