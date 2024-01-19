@@ -6,7 +6,7 @@ function memory() {
         var stage = document.getElementById("number");
 
         for(var i = 0; i < amount; i++) {
-            var number = Math.floor(math.random()*9);
+            var number = Math.floor(Math.random()*9);
             
         }
         stage.innerText(toString(number));
