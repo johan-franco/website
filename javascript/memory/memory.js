@@ -10,5 +10,6 @@ function memory() {
             
         }
         stage.innerHTML = number;
+        console.log(number);
 
 }
