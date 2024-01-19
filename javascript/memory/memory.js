@@ -9,7 +9,6 @@ function memory() {
             var number = Math.floor(Math.random()*9);
             
         }
-        stage.innerHTML = toString(number);
-        
+        stage.innerHTML = number;
 
 }
