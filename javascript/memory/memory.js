@@ -2,7 +2,7 @@ function memory() {
     var progress_bar = document.querySelector(".progressinner");
 
     amount = 1;
-    while(true) {
+
         var stage = document.getElementById("number");
 
         for(var i = 0; i < amount; i++) {
@@ -10,5 +10,6 @@ function memory() {
             
         }
         stage.innerHTML = toString(number);
-    }
+        
+
 }
