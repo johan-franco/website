@@ -37,7 +37,7 @@
                 var output = "";
                 for (var i = 0, x = files.length; i < x; ++i) {
                     var name = escape(files[i].name);
-                    name = name.replace("%20", " ")
+                    name = name.replace("%20", " ");
                     var type = files[i].type || "n/a";
                     var size = files[i].size;
                     var lastModDate = files[i].lastModifiedDate ? files[i].lastModifiedDate.toLocaleDateString() : "n/a";
