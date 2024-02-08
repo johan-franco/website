@@ -34,20 +34,20 @@
   
                 var canvas = document.createElement("canvas");
                 document.body.appendChild(canvas);
-                for(let i = 1;i < smile_num+1;i++ ) {
+                for(let i = 1;i <= smile_num;i++ ) {
                         if (canvas.getContext) {
                             var ctx = canvas.getContext("2d");
                             ctx.beginPath();
                             ctx.lineWidth = 3/smile_num;
                             ctx.fillStyle = "blue";
-                            ctx.arc(i*75/smile_num, i*75/smile_num, i*50/smile_num, 0+(i-1)*Math.PI*2/smile_num, Math.PI * 2/smile_num, true); // Outer circle
+                            ctx.arc(i*75, i*75, i*50, 0+(i-1)*Math.PI*2/smile_num, Math.PI * 2/smile_num, true); // Outer circle
                             ctx.fill();
                             // ctx.moveTo(110,75);
-                            ctx.arc(i*75/smile_num, i*75/smile_num, i*35/smile_num, 0+(i-1)*Math.PI*2/smile_num, Math.PI * 2/smile_num, false); // Mouth (clockwise)
+                            ctx.arc(i*75, i*75, i*35, 0+(i-1)*Math.PI*2/smile_num, Math.PI * 2/smile_num, false); // Mouth (clockwise)
                             // ctx.moveTo(65,65);
-                            ctx.arc(i*60/smile_num, i*65/smile_num, i*5/smile_num, 0+(i-1)*Math.PI*2/smile_num, Math.PI * 2/smile_num, true); // Left eye
+                            ctx.arc(i*60, i*65, i*5, 0+(i-1)*Math.PI*2/smile_num, Math.PI * 2/smile_num, true); // Left eye
                             // ctx.moveTo(95,65);
-                            ctx.arc(i*90/smile_num, i*65/smile_num, i*5/smile_num, 0+(i-1)*Math.PI*2/smile_num, Math.PI * 2/smile_num, true); // Right eye
+                            ctx.arc(i*90, i*65, i*5, 0+(i-1)*Math.PI*2/smile_num, Math.PI * 2/smile_num, true); // Right eye
                             ctx.stroke();
                     }
                 }
