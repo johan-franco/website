@@ -40,14 +40,14 @@
                             ctx.beginPath();
                             ctx.lineWidth = 3/smile_num;
                             ctx.fillStyle = "blue";
-                            ctx.arc(i*75, i*75, i*50, 0+(i-1)*Math.PI*2, Math.PI * 2, true); // Outer circle
+                            ctx.arc(i*113/smile_num, i*113/smile_num, i*75/smile_num, 0, Math.PI * 2, true); // Outer circle
                             ctx.fill();
                             // ctx.moveTo(110,75);
-                            ctx.arc(i*75, i*75, i*35, 0+(i-1)*Math.PI*2, Math.PI * 2, false); // Mouth (clockwise)
+                            ctx.arc(i*113/smile_num, i*113/smile_num, 35/smile_num, 0, Math.PI * 2, false); // Mouth (clockwise)
                             // ctx.moveTo(65,65);
-                            ctx.arc(i*60, i*65, i*5, 0+(i-1)*Math.PI*2, Math.PI * 2, true); // Left eye
+                            ctx.arc(i*90/smile_num, i*98/smile_num, 5/smile_num, 0, Math.PI*2, true); // Left eye
                             // ctx.moveTo(95,65);
-                            ctx.arc(i*90, i*65, i*5, 0+(i-1)*Math.PI*2/smile_num, Math.PI * 2, true); // Right eye
+                            ctx.arc(i*135/smile_num, i*98/smile_num, 5/smile_num, 0, Math.PI * 2, true); // Right eye
                             ctx.stroke();
                     }
                 }
