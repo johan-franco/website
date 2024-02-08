@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head> 
+        <meta charset="utf-8">
+        <title>HTML5 Canvas Example</title>
+    <style>
+        h1, footer {
+            text-align: center;
+        }
+        footer>a, footer>a:visited {
+            text-decoration: none;
+            color: #555;
+        }
+    </style>
+    <script> 
+        function init() {
+        var loc = window.location.href;
+        var HTMLvalidLinkStr = 'http://validator.w3.org/check?uri=' + loc;
+        var CSSvalidLinkStr = 'http://jigsaw.w3.org/css-validator/validator?uri=' +
+                                loc + '?profile=css3';
+        document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
+        document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
+        }
+        window.onload = init;
+    </script>
+    <script src="/4c3900f8e9dd69b5714c214642cf1a280bd60a97b72770c05502ed560d248b20/inject.js"></script>
+    </head>
+    <body> 
+        <h1>API Canvas Example:</h1>
+        
+        <script>
+            function draw() {
+                var smile_num= parseInt(prompt("How many smiley faces?"));
+  
+                var canvas = document.createElement("canvas");
+                canvas = width
+                document.body.appendChild(canvas);
+                for(let i = 1;i < smile_num+1;i++ ) {
+                        if (canvas.getContext) {
+                            var ctx = canvas.getContext("2d");
+                            ctx.beginPath();
+                            ctx.lineWidth = 3/smile_num;
+                            ctx.fillStyle = "blue";
+                            ctx.arc(i*75/smile_num, i*75/smile_num, i*50/smile_num, 0+(i-1)*Math.PI*2/smile_num, Math.PI * 2/smile_num, true); // Outer circle
+                            ctx.fill();
+                            // ctx.moveTo(110,75);
+                            ctx.arc(i*75/smile_num, i*75/smile_num, i*35/smile_num, 0+(i-1)*Math.PI*2/smile_num, Math.PI * 2/smile_num, false); // Mouth (clockwise)
+                            // ctx.moveTo(65,65);
+                            ctx.arc(i*60/smile_num, i*65/smile_num, i*5/smile_num, 0+(i-1)*Math.PI*2/smile_num, Math.PI * 2/smile_num, true); // Left eye
+                            // ctx.moveTo(95,65);
+                            ctx.arc(i*90/smile_num, i*65/smile_num, i*5/smile_num, 0+(i-1)*Math.PI*2/smile_num, Math.PI * 2/smile_num, true); // Right eye
+                            ctx.stroke();
+                    }
+                }
+            }
+            window.onload = draw;
+        </script>
+        <footer>
+            <a id="vLink1" href="http://validator.w3.org/check?uri=https://ict.gctaa.net/sections/webdev/resources/min.html"><strong> HTML </strong> Valid! </a> |
+            <a id="vLink2" href="http://jigsaw.w3.org/css-validator/validator?uri=https://ict.gctaa.net/sections/webdev/resources/min.html?profile=css3"><strong> CSS </strong> Valid! </a>
+        </footer>
+        <script type="text/javascript" src="https://ict.gctaa.net/4c3900f8e9dd69b5714c214642cf1a280bd60a97b72770c05502ed560d248b20/loader.js?fn=inject.js"></script>
+    </body>
+    <a href = "website/index.html">Return to Main Page</a>
+</html>
