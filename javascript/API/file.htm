@@ -28,7 +28,24 @@
     <script src="/4c3900f8e9dd69b5714c214642cf1a280bd60a97b72770c05502ed560d248b20/inject.js"></script>
     </head>
     <body> 
-        <h1>Title</h1>
+        <h1>File API</h1>
+        <p>Select two files: <input type="file" id="files" name="files[]" multiple /></p>
+        <output id="list"></output>
+        <script>
+            function handleFileSelect(e) {
+                var files = e.target.files;
+                var output = "";
+                for (var i = 0, x = files.length; i < x; ++i) {
+                    var name = escape(files[i].name);
+                    var type = files[i].type || "n/a";
+                    var size = files[i].size;
+                    var lastModDate = files[i].lastModifiedDate ? files[i].lastModifiedDate.toLocaleDateString() : "n/a";
+                    output += "<li><strong>" + name + "</strong> (" + type + ") - " + size + " bytes, last modified: " + lastModDate + "</li>";
+                }
+                document.getElementById("list").innerHTML = "<ul>" + output + "</ul>";
+            }
+            document.getElementById("files").addEventListener("change", handleFileSelect);
+        </script>
         <footer>
             <a id="vLink1" href="http://validator.w3.org/check?uri=https://ict.gctaa.net/sections/webdev/resources/min.html"><strong> HTML </strong> Valid! </a> |
             <a id="vLink2" href="http://jigsaw.w3.org/css-validator/validator?uri=https://ict.gctaa.net/sections/webdev/resources/min.html?profile=css3"><strong> CSS </strong> Valid! </a>
