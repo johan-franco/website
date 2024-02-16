@@ -9,4 +9,4 @@ function piece() {
     console.log("working")
 }
 
-    window.onload = piece;
+window.onload = piece;
