@@ -40,9 +40,19 @@
                 <label for="feel">How are you feeling? Sad </label>
                 <input type="range" name="feeling" min="0" max="50" value="25" id="feel" /> Happy
             </p>
+
+
             </fieldset>
             <fieldset name="quiz">
             <legend>Quiz:</legend>
+            
+            <p>
+                <label for="question">What piece do you want to be? (won't affect results): </label>
+            </p>
+             <p>
+                <textarea name="wantedpiece" placeholder="The chess piece I want to be is a horse." maxlength="140" rows="3" cols="30" id="question"></textarea>
+            </p>
+
             <p>
                 <label for="tra">Choose a trait that describes you best: </label>
                 <input list="trait" name="trait" id="tra" />
