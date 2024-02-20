@@ -18,7 +18,9 @@
     </head>
     <body> 
         <h1>What Chess Piece are you?</h1>
-        <form onchange = "piece()"> 
+        <form onchange = "piece()">
+            <fieldset name="personal_info">
+            <legend>Personal Information:</legend> 
             <p>
                 <label for="first">First name: </label>
                 <input type="text" name="firstname" id="first" />
@@ -30,7 +32,7 @@
             </p>
             
             <p>
-                <label for="num">Age of user (This is relevant): </label>
+                <label for="num">Age of user: </label>
                 <input type="number" name="age" min="1" max="100" id="num" />
             </p>
             
@@ -38,7 +40,9 @@
                 <label for="feel">How are you feeling? Sad </label>
                 <input type="range" name="feeling" min="0" max="50" value="25" id="feel" /> Happy
             </p>
-
+            </fieldset>
+            <fieldset name="quiz">
+            <legend>Quiz:</legend>
             <p>
                 <label for="tra">Choose a trait that describes you best: </label>
                 <input list="trait" name="trait" id="tra" />
@@ -58,7 +62,7 @@
                 </datalist>
             </p>
         </form>
-        
+
         <footer>
             <a id="vLink1" href="http://validator.w3.org/check?uri=https://ict.gctaa.net/sections/webdev/resources/min.html"><strong> HTML </strong> Valid! </a> |
             <a id="vLink2" href="http://jigsaw.w3.org/css-validator/validator?uri=https://ict.gctaa.net/sections/webdev/resources/min.html?profile=css3"><strong> CSS </strong> Valid! </a>
