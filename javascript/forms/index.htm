@@ -28,12 +28,12 @@
             
             <p>
                 <label for="last">Last name: </label>
-                <input type="text" name="lastname" id="last" />
+                <input type="text" name="lastname" id="last" required />
             </p>
             
             <p>
                 <label for="num">Age of user: </label>
-                <input type="number" name="age" min="1" max="100" id="num" />
+                <input type="number" name="age" min="1" max="100" id="num" required/>
             </p>
             
             <p>
@@ -50,7 +50,7 @@
                 <label for="question">What piece do you want to be? (won't affect results): </label>
             </p>
              <p>
-                <textarea name="wantedpiece" placeholder="The chess piece I want to be is a horse." maxlength="140" rows="3" cols="30" id="question"></textarea>
+                <input type="text" name="wantedpiece" placeholder="horse" maxlength="140"  pattern = "^horse | ^bishop | ^king | ^queen| ^pawn|^rook" id="question"></textarea>
             </p>
 
             <p>
