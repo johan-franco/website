@@ -6,7 +6,27 @@ function piece() {
     document.getElementById("vLink1").setAttribute("href", HTMLvalidLinkStr);
     document.getElementById("vLink2").setAttribute("href", CSSvalidLinkStr);
 
-    console.log("working")
+    console.log("working");
+
+    var horse = document.getElementsByClassName("horse");
+    var bishop = document.getElementsByClassName("bishop");
+    var rook = document.getElementsByClassName("rook");
+    var pawn = document.getElementsByClassName("pawn");
+    var king = document.getElementsByClassName("king");
+    var queen = document.getElementsByClassName("queen");
+
+    var input = document.getElementById("tra");
+
+    var total = [horse,bishop,rook,pawn,king, queen];
+    console.log(input.innerText);
+    for (var i = 0; i < total.length; i++) {
+        for (var j = 0; j < total[i].length; j++) {
+            if (total[i][j] = input.innerText) {
+                console.log(total[i]);
+            }
+        }
+    }
+    
 }
 
 window.onload = piece;
