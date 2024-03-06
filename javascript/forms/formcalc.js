@@ -18,7 +18,7 @@ function piece() {
     var input = document.getElementById("tra");
 
     var total = [horse,bishop,rook,pawn,king, queen];
-    console.log(input.innerText);
+    console.log(input.innerHTML);
     for (var i = 0; i < total.length; i++) {
         for (var j = 0; j < total[i].length; j++) {
             if (total[i][j] = input.innerText) {
