@@ -19,6 +19,7 @@ function piece() {
 
     var total = [horse,bishop,rook,pawn,king, queen];
     console.log(input.innerHTML);
+    console.log(total.innerHTML);
     for (var i = 0; i < total.length; i++) {
         for (var j = 0; j < total[i].length; j++) {
             if (total[i][j] = input.innerText) {
