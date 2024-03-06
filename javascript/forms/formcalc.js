@@ -22,9 +22,11 @@ function piece() {
     console.log(total.innerHTML);
     for (var i = 0; i < total.length; i++) {
         for (var j = 0; j < total[i].length; j++) {
-            if (total[i][j] = input.innerText) {
-                console.log(total[i]);
+            if (total[i][j].value == input.value) {
+                console.log(total[i][j].className);
+                console.log("reached");
             }
+            console.log(total[i][j].value);
         }
     }
     
