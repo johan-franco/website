@@ -46,6 +46,26 @@
         <tr><td id = "rapid">Placeholder</td> <td id = "blitz">Placeholder </td> <td id = "bullet">Placeholder</td></tr>
     </table>
     <br><br><button id = "update-data" type = "button">Update data</button> 
+
+    <br>
+    <div class="meeting-irc-chat">
+        <h3>Real-time Chat for This Meeting</h3>
+        <iframe src="https://webchat.oftc.net/?channels=%23novawebdev"
+                width="100%" 
+                height="600px" 
+                style="border: none;">
+        </iframe>
+     </div>
+     
+     <style>
+        .meeting-irc-chat {
+            margin-top: 20px;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border-radius: 8px;
+        }
+     </style>
+     
     <script> 
     function parsing(d, s){
         start_slice = d.search(s)
